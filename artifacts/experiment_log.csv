@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed-size,500,50,"document_id, source, page, document_type, year, chapter",none,paraphrase-multilingual-MiniLM-L12-v2,"Baseline fixed windows; overlap may preserve split evidence.",1/15,1/15,0/5,0/5,"Qdrant local cosine; actual run; cost 0 (local)."
+B,paragraph,500,0,"document_id, source, page, document_type, year, chapter",none,paraphrase-multilingual-MiniLM-L12-v2,"Structure-aware paragraphs may improve coherence.",1/15,1/15,0/5,0/5,"Qdrant local cosine; actual run; cost 0 (local)."
+C,paragraph,500,0,"document_id, source, page, document_type, year, chapter",chapter,paraphrase-multilingual-MiniLM-L12-v2,"Same chunks as B; chapter filter is applied only when provided by the question.",1/15,1/15,0/5,0/5,"Qdrant local cosine; actual run; cost 0 (local)."

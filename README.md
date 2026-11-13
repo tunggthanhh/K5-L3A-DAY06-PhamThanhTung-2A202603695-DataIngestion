@@ -12,6 +12,39 @@ Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, r�
 
 Dùng [starter PostgreSQL + pgvector](starter/README.md) để dựng database và hoàn thiện các hàm TODO, hoặc tự chọn vector store tương đương. Starter chỉ là khung: **bạn tự hiện thực pipeline và benchmark**.
 
+## Cách chạy bài của Phạm Thanh Tùng
+
+Phiên bản bài làm trong `starter/` dùng Qdrant local, không cần Docker. Cài Python dependencies rồi chạy:
+
+```powershell
+cd starter
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+Copy-Item .env.example .env
+python -m src.run
+```
+
+### Demo giao diện
+
+Sau khi đã chạy pipeline để tạo `starter/results/traces.json`, dùng **một trong hai** lệnh sau:
+
+Nếu đang ở thư mục gốc của repo:
+
+```powershell
+python -m http.server 8000 --directory starter
+```
+
+Nếu đang ở trong thư mục `starter` (sau khi đã kích hoạt `.venv`):
+
+```powershell
+python -m http.server 8000
+```
+
+Mở trình duyệt tại `http://localhost:8000/demo/`. Demo cho phép chọn câu hỏi benchmark và chiến lược A/B/C để xem top-3 chunk, metadata và trạng thái evidence đã lưu.
+
+Pipeline dùng `paraphrase-multilingual-MiniLM-L12-v2` để tạo embedding tiếng Việt và lưu index Qdrant tại `starter/results/qdrant/`. Kết quả gồm `starter/results/metrics.json` và `starter/results/traces.json`.
+
 ## 1. Xây pipeline
 
 ![Đọc tài liệu, chuẩn hóa, chia chunk, tạo vector, lưu và kiểm tra](assets/ingestion-pipeline.svg)

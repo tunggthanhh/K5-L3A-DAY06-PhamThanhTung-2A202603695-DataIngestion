@@ -1,0 +1,44 @@
+{
+  "A": {
+    "dev": {
+      "n": 15,
+      "hit_at_1": "1/15",
+      "evidence_hit_at_3": "1/15",
+      "page_verified_questions": 15
+    },
+    "test": {
+      "n": 5,
+      "hit_at_1": "0/5",
+      "evidence_hit_at_3": "0/5",
+      "page_verified_questions": 5
+    }
+  },
+  "B": {
+    "dev": {
+      "n": 15,
+      "hit_at_1": "1/15",
+      "evidence_hit_at_3": "1/15",
+      "page_verified_questions": 15
+    },
+    "test": {
+      "n": 5,
+      "hit_at_1": "0/5",
+      "evidence_hit_at_3": "0/5",
+      "page_verified_questions": 5
+    }
+  },
+  "C": {
+    "dev": {
+      "n": 15,
+      "hit_at_1": "1/15",
+      "evidence_hit_at_3": "1/15",
+      "page_verified_questions": 15
+    },
+    "test": {
+      "n": 5,
+      "hit_at_1": "0/5",
+      "evidence_hit_at_3": "0/5",
+      "page_verified_questions": 5
+    }
+  }
+}

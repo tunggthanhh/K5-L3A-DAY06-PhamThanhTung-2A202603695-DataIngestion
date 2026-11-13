@@ -1,0 +1,27 @@
+{
+  "sources": [
+    {
+      "source_id": "bo-luat-lao-dong-2019",
+      "title": "Bộ luật Lao động số 45/2019/QH14",
+      "document_type": "Bộ luật",
+      "issuing_body": "Quốc hội",
+      "issued_at": "2019-11-20",
+      "effective_from": "2021-01-01",
+      "document_version": "Văn bản gốc số 45/2019/QH14; không phải văn bản hợp nhất",
+      "local_path": "data/bo_luat_lao_dong.pdf",
+      "official_source_url": "https://vanban.chinhphu.vn/?classid=1&docid=198540&pageid=27160&typegroupid=3",
+      "license_or_permission": "Văn bản quy phạm pháp luật được công khai trên Cổng Thông tin điện tử Chính phủ. Nộp kèm thông tin nguồn; không tuyên bố một giấy phép Creative Commons khi nguồn không nêu giấy phép đó.",
+      "accessed_at": "2026-11-13",
+      "physical_pages": 94,
+      "counted_content_pages": 93,
+      "page_counting_rule": "Chỉ đếm các trang chứa nội dung của Bộ luật; không tính bìa, trang trắng hoặc mục lục nếu có.",
+      "extraction_status": "PDF hiện dùng có lớp văn bản; pypdf trích xuất được text ở 93/94 trang. Trang không có text được giữ và gắn cờ trong pipeline để audit.",
+      "metadata_fields": {
+        "document_id": "bo-luat-lao-dong-2019",
+        "document_type": "Bộ luật",
+        "year": 2019,
+        "chapter": "Trích xuất từ tiêu đề Chương trong văn bản; dùng làm trường filter"
+      }
+    }
+  ]
+}

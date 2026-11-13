@@ -8,3 +8,7 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 *.sqlite
+starter/results/qdrant/
+starter/results/qdrant_smoke/
+starter/data/bo_luat_lao_dong_1.pdf
+starter/data/bo_luat_lao_dong_ll.pdf

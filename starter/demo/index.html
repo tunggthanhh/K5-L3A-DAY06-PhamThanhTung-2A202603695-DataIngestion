@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Labor Code Retrieval Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">DAY 06 · DATA INGESTION ENGINEERING</p>
+      <h1>Tra cứu Bộ luật Lao động</h1>
+      <p>Demo retrieval dùng corpus Bộ luật Lao động 2019, embedding multilingual và Qdrant local.</p>
+    </header>
+
+    <section class="controls" aria-label="Điều khiển demo">
+      <label>
+        Câu hỏi benchmark
+        <select id="questionSelect" aria-label="Chọn câu hỏi"></select>
+      </label>
+      <fieldset>
+        <legend>Chiến lược chunking</legend>
+        <div class="strategy-buttons" id="strategyButtons">
+          <button type="button" data-strategy="A" class="active">A · Fixed-size</button>
+          <button type="button" data-strategy="B">B · Paragraph</button>
+          <button type="button" data-strategy="C">C · Paragraph + filter</button>
+        </div>
+      </fieldset>
+    </section>
+
+    <section class="question-card" aria-live="polite">
+      <div class="question-meta"><span id="splitBadge"></span><span id="goldPage"></span></div>
+      <h2 id="questionText">Đang tải câu hỏi…</h2>
+      <p><strong>Đáp án kỳ vọng:</strong> <span id="expectedAnswer"></span></p>
+      <p class="evidence"><strong>Evidence vàng:</strong> <span id="goldEvidence"></span></p>
+    </section>
+
+    <section class="result-header">
+      <div>
+        <p class="eyebrow">KẾT QUẢ RETRIEVAL</p>
+        <h2>Top-3 chunks</h2>
+      </div>
+      <div id="metricBadges" class="metric-badges"></div>
+    </section>
+    <section id="hits" class="hits" aria-live="polite"></section>
+    <p id="status" class="status"></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
